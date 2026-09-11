@@ -37,6 +37,8 @@ int main() {
                   << "4. Roster\n"
                   << "5. Class Average\n"
                   << "6. Test countAtRisk\n"
+                  << "7. Test topStudent\n"
+                  << "8. Test findClassExtremes\n"
                   << "0. Quit\n"
                   << "Choice: ";
 
@@ -77,7 +79,23 @@ int main() {
                           << countAtRisk(scores)
                           << '\n';
                     break;
+                }
+                case 7: {
+                    std::cout << "Top Student Row: "
+                              << topStudent(scores)
+                              << '\n';
+                    break;
+                }
+                case 8: {
+                    double lowest;
+                    double highest;
+                    int lowestStudent;
+                    int highestStudent;
+                    findClassExtremes(scores, lowest, lowestStudent, highest, highestStudent);
+                    std::cout << "Lowest: " << lowest << " Student: " << lowestStudent << '\n';
+                    std::cout << "Highest: " << highest << " Student: " << highestStudent << '\n';
 
+                    break;
                 }
                 case 0: {
                     std::cout << "Goodbye!\n";
