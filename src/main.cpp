@@ -36,6 +36,7 @@ int main() {
                   << "3. Assignment Averages\n"
                   << "4. Roster\n"
                   << "5. Class Average\n"
+                  << "6. Test countAtRisk\n"
                   << "0. Quit\n"
                   << "Choice: ";
 
@@ -70,6 +71,13 @@ int main() {
                               << std::setprecision(2) << std::fixed << avg
                               << '\n';
                     break;
+                }
+                case 6: {
+                    std::cout << "At Risk Count:"
+                          << countAtRisk(scores)
+                          << '\n';
+                    break;
+
                 }
                 case 0: {
                     std::cout << "Goodbye!\n";
