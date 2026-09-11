@@ -65,4 +65,6 @@ void printAssignmentSummary(const ScoreGrid& scores);
  */
 void printRoster(const std::string* names, int nameCount);
 
+void printStudentRow();
+
 #endif
