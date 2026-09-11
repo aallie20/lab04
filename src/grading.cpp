@@ -113,3 +113,19 @@ int topStudent(const ScoreGrid& scores) {
  
      return bestRow;
 }
+
+void applyCurve(ScoreGrid& scores, double points)
+{
+    for (int student = 0; student < STUDENT_COUNT; student++)
+    {   
+        for (int assignment = 0; assignment < ASSIGNMENT_COUNT; assignment++)
+        {
+            scores[student][assignment] += points;
+
+            if (scores[student][assignment] > 100.0)
+            {
+                scores[student][assignment] = 100.0;
+            }
+        }
+    }
+}
