@@ -99,4 +99,17 @@ int countAtRisk(const ScoreGrid& scores) {
 
     return count;
 }
-
+int topStudent(const ScoreGrid& scores) {
+     int bestRow = 0;
+ 
+     for (int student = 1; student < STUDENT_COUNT; student++) {
+         if(studentAverage(scores, student) >
+            studentAverage(scores, bestRow)) {
+ 
+            bestRow = student;
+            }
+ 
+     }
+ 
+     return bestRow;
+}
