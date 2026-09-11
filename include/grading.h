@@ -102,13 +102,13 @@ void findExtremes(const ScoreGrid& scores, int studentIndex,
 * @param scores Grade data.
 * @return Number of at-risk students.
 */
-[[nodiscard]] int countAtRisk();
+[[nodiscard]] int countAtRisk(const ScoreGrid& scores);
 
-void findClassExtremes();
+void findClassExtremes(const ScoreGrid& scores, double& lowest, int& lowestStudent, double& highest, int& highestStudent);
 
-void applyCurve();
+void applyCurve(ScoreGrid& scores, double points);
 
-[[nodiscard]]int topStudent();
+[[nodiscard]]int topStudent(const ScoreGrid& scores);
 
 #endif
 
